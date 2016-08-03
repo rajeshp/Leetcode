@@ -24,36 +24,20 @@ public class DecodeWays {
 
     public int numDecodings(String s) {
 
-        if(s==null || s.length()==0)
+        if(s.length()==0)
             return 0;
-
-        if(s.length()==1){
+        if(s.length()==1)
             return 1;
-        }
-
         if(s.length()==2){
-            int n = Integer.parseInt(s);
-
-            if(n<=26)
+            if(Integer.parseInt(s) > 26)
                 return 2;
             else
                 return 1;
         }
 
 
-        int count=1, len=s.length();
+        return 1 + numDecodings(s.substring(0,2));
 
-        int[] temp = new int[s.length()];
-
-        temp[0] = numDecodings(s.substring(s.length()-1));
-        temp[1] = numDecodings(s.substring(s.length()-2));
-
-        for(int i=2;i<s.length();i++){
-            temp[i]= numDecodings(s.substring(s.length()-i-1, s.length()-i+1));
-            temp[i]+=temp[i-2];
-        }
-
-        return temp[temp.length-1];
     }
 
 
