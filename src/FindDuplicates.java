@@ -6,22 +6,20 @@ public class FindDuplicates {
     public static void main(String[] args) {
 
         //System.out.println(findDuplicate(new int[]{1,2,3,1}));
-        System.out.println(findDuplicate(new int[]{2,2,2,1}));
+       // System.out.println(findDuplicate(new int[]{3,2,3,3}));
+        System.out.println(findDuplicate(new int[]{1,3,4,2,2}));
 
     }
 
     public static int findDuplicate(int[] nums) {
 
-        int res = 0;
-
-        int x=0;
-
         for(int i=0;i<nums.length;i++){
-            res=res^nums[i];
-            x=x^i;
+            if(nums[Math.abs(nums[i])] < 0)
+                return Math.abs(nums[i]);
+            else
+                nums[Math.abs(nums[i])] = -nums[Math.abs(nums[i])];
         }
 
-        return res;
+        return -1;
     }
-
 }

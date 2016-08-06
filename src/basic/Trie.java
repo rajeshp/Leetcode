@@ -81,7 +81,7 @@ public class Trie {
     }
 
     boolean delete(String s){
-
+        return false;
     }
 
     public static void main(String[] args) {
