@@ -19,7 +19,7 @@ public class LongestSubstring {
         while(end < s.length()){
             c = s.charAt(end);
 
-            if(!map.containsKey((Character)c)){
+            if(!map.containsKey(c)){
                 map.put(c,end);
 
                 currSize++;

@@ -54,12 +54,8 @@ public class WildcardMatching {
 
         }
 
-        if(i<s.length() || j<p.length())
-            return false;
+        return !(i < s.length() || j < p.length());
 
-
-
-        return true;
 
     }
 

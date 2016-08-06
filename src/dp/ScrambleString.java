@@ -19,11 +19,9 @@ public class ScrambleString {
        if(s1[l1]==s2[l2])
            return true;
 
-       if(s1[l2]==s2[l1])
-           return true;
+        return s1[l2] == s2[l1];
 
 
-        return false;
     }
 
 }

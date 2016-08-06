@@ -76,10 +76,7 @@ public class PalindromeLinkedList {
         }
 
 
-        if((headA==null || headA==mid)&& (headB==null||headB==endB))
-            return true;
-        else
-            return false;
+        return (headA == null || headA == mid) && (headB == null || headB == endB);
 
 
     }

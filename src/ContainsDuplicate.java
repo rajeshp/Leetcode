@@ -18,10 +18,7 @@ public class ContainsDuplicate {
             n  = n ^ nums[i] ;
         }
 
-        if(n==1 || n==5)
-            return true;
-        else
-            return false;
+        return n == 1 || n == 5;
     }
 
 
